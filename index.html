@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Email List</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- VueJS cdn -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- /VueJS cdn -->
@@ -15,9 +16,9 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="container">
         <h1>Lista mail</h1>
-        <ul>
+        <ul v-if="mailList.length === visibleMails">
             <li v-for="mail in mailList">{{ mail }}</li>
         </ul>
     </div>

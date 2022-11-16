@@ -6,3 +6,10 @@
     padding: 0;
     margin: 0;
 }
+/*----------------
+    MAIN
+-----------------*/
+.container {
+    margin: auto;
+    max-width: 62.5rem;
+}
