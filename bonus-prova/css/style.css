@@ -1,0 +1,74 @@
+/*----------------
+    RESET
+-----------------*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*------------------
+    TYPOGRAPHY
+-------------------*/
+.ft-20 {
+    font-size: 1.25rem;
+}
+
+/*------------------
+    COMMON
+-------------------*/
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+    max-width: 37.5rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+/*------------------
+    FORM
+-------------------*/
+.add-mail {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+}
+.component-shape {
+    padding: .75rem 1rem;
+    border-radius: .625rem;
+    border: 1px solid black;
+}
+#mail-input {
+    width: 75%;
+}
+#add-btn {
+    width: 22%;
+}
+
+/*------------------
+    MAILS CONTAINER
+-------------------*/
+.mails-container {
+    width: 100%;
+    padding: 1.875rem;
+    background-color: #f3f6f6;
+    border-radius: .625rem;
+}
+.mail-list {
+    list-style: none;
+}
+.mail-list .mail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem;
+    border-bottom: 1px solid #d5d9dd;
+}

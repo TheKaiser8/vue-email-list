@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Email List</title>
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /Font-awesome -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- VueJS cdn -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- /VueJS cdn -->
+    <!-- Axios cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- /Axios cdn -->
+</head>
+
+<body>
+    <div id="app" class="container">
+
+        <h1>Mailing List</h1>
+        
+        <form class="add-mail" @submit.prevent="addMail">
+            <input id="mail-input" class="component-shape" type="email" placeholder="Inserisci mail" v-model="newMail" required>
+            <button id="add-btn" class="component-shape" type="submit">Aggiungi</button>
+        </form>
+
+        <div class="mails-container">
+            <ul class="mail-list" v-if="mailList.length >= visibleMails">
+                <li class="mail" v-for="(mail, index) in mailList">
+                    <span>{{ mail }}</span>
+                    <i class="fa-solid fa-xmark ft-20" @click="removeMail(index)"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
