@@ -21,6 +21,7 @@ createApp({
     methods: {
         removeMail(i) {
             this.mailList.splice(i, 1);
+            // Bug quando le mail sono <= di visibleMails
         },
         addMail() {
             const mailAdded = this.newMail;
